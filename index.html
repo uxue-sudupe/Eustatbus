@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototipo funcional de la futura interfaz DIRAE">
+  <title>Eustatbus · Prototipo DIRAE</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="#panel" aria-label="Eustatbus, inicio">
+        <span class="brand-mark">E</span>
+        <span><strong>Eustatbus</strong><small>Prototipo DIRAE</small></span>
+      </a>
+      <nav id="main-nav">
+        <a href="#panel" data-route="panel"><span>▦</span>Panel de trabajo</a>
+        <a href="#casos" data-route="casos"><span>✓</span>Casos pendientes <b id="nav-count">6</b></a>
+        <a href="#buscar" data-route="buscar"><span>⌕</span>Buscar unidades</a>
+        <a href="#calidad" data-route="calidad"><span>◫</span>Calidad</a>
+        <a href="#metodologia" data-route="metodologia"><span>◎</span>Cómo funciona</a>
+      </nav>
+      <div class="sidebar-note"><strong>Entorno de demostración</strong><p>Todos los nombres, identificadores y datos son sintéticos.</p></div>
+      <div class="profile"><span>MA</span><div><strong>Miren A.</strong><small>Auxiliar DIRAE</small></div></div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button id="menu-button" class="icon-button" aria-label="Abrir navegación">☰</button>
+        <div><p class="eyebrow">Ciclo 2026 · Actualización anual</p><h1 id="page-title">Panel de trabajo</h1></div>
+        <div class="top-actions"><label class="global-search"><span>⌕</span><input id="global-search" type="search" placeholder="CIF, nombre o ID DIRAE" aria-label="Buscar"></label><button class="button secondary" id="reset-demo">Restablecer demo</button></div>
+      </header>
+      <div id="app" tabindex="-1"></div>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
